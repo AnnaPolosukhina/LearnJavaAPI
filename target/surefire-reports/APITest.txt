@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: APITest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.697 s <<< FAILURE! - in APITest
+apiTest  Time elapsed: 1.618 s  <<< ERROR!
+javax.net.ssl.SSLException: Received fatal alert: internal_error
+	at APITest.apiTest(APITest.java:12)
+
