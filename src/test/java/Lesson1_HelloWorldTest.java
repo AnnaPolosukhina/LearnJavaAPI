@@ -1,9 +1,7 @@
 
-import io.restassured.RestAssured;
-import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 
-public class HelloWorldTest {
+public class Lesson1_HelloWorldTest {
 String name = "Anna";
 
     @Test
