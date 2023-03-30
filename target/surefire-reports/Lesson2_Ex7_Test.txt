@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: Lesson1_APITest
+Test set: Lesson2_Ex7_Test
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.724 s - in Lesson1_APITest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.089 s - in Lesson2_Ex7_Test

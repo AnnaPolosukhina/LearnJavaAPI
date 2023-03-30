@@ -11,7 +11,7 @@ public class Lesson2_Ex5_Test {
                 .get("https://playground.learnqa.ru/api/get_json_homework")
                 .jsonPath();
 
-      //  System.out.println(response2.prettyPrint());  //изучила структуру json
+       // System.out.println(response2.prettyPrint());  //изучила структуру json
         System.out.println(response2.getString("messages.message[1]")); //вывела текст 2го сообщения
 
     }
