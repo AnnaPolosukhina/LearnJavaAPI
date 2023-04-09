@@ -32,7 +32,7 @@ public class UserAuthTest extends BaseTestCase {
         Response responseGetAuth = RestAssured
                 .given()
                 .body(authData)
-                .post("https://playground.learnqa.ru/api/user/login1")
+                .post("https://playground.learnqa.ru/api/user/login")
                 .andReturn();
 
         this.cookie = this.getCookie(responseGetAuth, "auth_sid");

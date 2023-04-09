@@ -1,16 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: tests.UserAuthTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0.573 s <<< FAILURE! - in tests.UserAuthTest
-testNegativeAuth{String}[1]  Time elapsed: 0.179 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Response doesn`t have cookie with name auth_sid ==> expected: <true> but was: <false>
-	at tests.UserAuthTest.loginUser(UserAuthTest.java:38)
-
-testNegativeAuth{String}[2]  Time elapsed: 0.179 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Response doesn`t have cookie with name auth_sid ==> expected: <true> but was: <false>
-	at tests.UserAuthTest.loginUser(UserAuthTest.java:38)
-
-testAuthUser  Time elapsed: 0.211 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: Response doesn`t have cookie with name auth_sid ==> expected: <true> but was: <false>
-	at tests.UserAuthTest.loginUser(UserAuthTest.java:38)
-
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.343 s - in tests.UserAuthTest
