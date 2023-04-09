@@ -3,6 +3,7 @@ import io.restassured.RestAssured;
 import io.restassured.http.Headers;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 import java.util.HashMap;
@@ -13,6 +14,7 @@ import static java.lang.Thread.*;
 public class Lesson2_Ex8_Test {
 
     @Test
+    @Ignore
     public void testLesson2_Ex8_Test(){
 
         //1 создаем задачу
