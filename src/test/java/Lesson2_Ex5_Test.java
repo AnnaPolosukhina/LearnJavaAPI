@@ -1,12 +1,13 @@
 import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import jdk.nashorn.internal.ir.annotations.Ignore;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class Lesson2_Ex5_Test {
 
+    @Disabled
     @Test
-    @Ignore
     public void testLesson2_Ex5_Test(){
 
         JsonPath response2 = RestAssured
