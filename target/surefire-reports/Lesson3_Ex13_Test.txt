@@ -1,25 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: Lesson3_Ex13_Test
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.419 s <<< FAILURE! - in Lesson3_Ex13_Test
-testLesson3_Ex13_Test{JSONObject}[2]  Time elapsed: 0.269 s  <<< FAILURE!
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 1.353 s <<< FAILURE! - in Lesson3_Ex13_Test
+testLesson3_Ex13_Test{JSONObject}[2]  Time elapsed: 0.283 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 For User Agent: "Mozilla/5.0 (iPad; CPU OS 13_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/91.0.4472.77 Mobile/15E148 Safari/604.1" the following errors occurred: 
 [browser value is not as required
  ==> expected: <Chrome> but was: <No>]
-	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:95)
+	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:58)
 
-testLesson3_Ex13_Test{JSONObject}[3]  Time elapsed: 0.314 s  <<< FAILURE!
+testLesson3_Ex13_Test{JSONObject}[3]  Time elapsed: 0.264 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 For User Agent: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" the following errors occurred: 
 [platform value is not as required
  ==> expected: <Googlebot> but was: <Unknown>]
-	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:95)
+	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:58)
 
-testLesson3_Ex13_Test{JSONObject}[5]  Time elapsed: 0.228 s  <<< FAILURE!
+testLesson3_Ex13_Test{JSONObject}[5]  Time elapsed: 0.241 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: 
 For User Agent: "Mozilla/5.0 (iPad; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1" the following errors occurred: 
 [device value is not as required
  ==> expected: <iPhone> but was: <Unknown>]
-	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:95)
+	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:58)
 

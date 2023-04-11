@@ -41,6 +41,7 @@ public class Lesson3_Ex13_Test {
                 assertNotNull(response.get(field), field+ " parameter is missing in the response\n");
             } catch (AssertionFailedError e) {
                 allCaughtErrors.add(e.getMessage());
+                continue;
             }
 
             if(response.get(field)!=null){
