@@ -28,45 +28,29 @@ public class Lesson3_Ex13_Test {
                 .jsonPath();
 
 
+        List<String> fieldsForCheck = new ArrayList<>();
+        fieldsForCheck.add("platform");
+        fieldsForCheck.add("browser");
+        fieldsForCheck.add("device");
+
         List<String> allCaughtErrors = new ArrayList<>();
-        {
+
+        for(String field: fieldsForCheck){
+
             try {
-                assertNotNull(response.get("platform"), "Platform parameter is missing in the response\n");
+                assertNotNull(response.get(field), field+ " parameter is missing in the response\n");
             } catch (AssertionFailedError e) {
                 allCaughtErrors.add(e.getMessage());
             }
 
+            if(response.get(field)!=null){
             try {
-                assertNotNull(response.get("browser"), "Browser parameter is missing in the response\n");
+                assertEquals(requiredValues.get(field), response.getString(field), field + " value is not as required\n");
             } catch (AssertionFailedError e) {
                 allCaughtErrors.add(e.getMessage());
             }
-
-            try {
-                assertNotNull(response.get("device"), "Device parameter is missing in the response\n");
-            } catch (AssertionFailedError e) {
-                allCaughtErrors.add(e.getMessage());
-            }
-
-            try {
-                assertEquals(requiredValues.get("platform"), response.getString("platform"), "Platform value is not as required\n");
-            } catch (AssertionFailedError e) {
-                allCaughtErrors.add(e.getMessage());
-            }
-
-            try {
-                assertEquals(requiredValues.get("browser"), response.getString("browser"), "Browser value is not as required\n");
-            } catch (AssertionFailedError e) {
-                allCaughtErrors.add(e.getMessage());
-            }
-
-            try {
-                assertEquals(requiredValues.get("device"), response.getString("device"), "Device value is not as required\n");
-            } catch (AssertionFailedError e) {
-                allCaughtErrors.add(e.getMessage());
             }
         }
-
 
         //========================== кидаем ошибку, если были несоответствия и печатаем все найденные несоответствия из листа allCaughtErrors ==========================
         if (allCaughtErrors.size() > 0) {
