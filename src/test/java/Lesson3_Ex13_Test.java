@@ -35,12 +35,6 @@ public class Lesson3_Ex13_Test {
                 .jsonPath();
 
         for (String field : fieldsForCheck) {
-
-            if (response.get(field) ==null) {
-                allCaughtErrors.add(field+ " parameter is missing in the response\n");
-                continue;
-            }
-
             try {
                 assertEquals(requiredValues.get(field), response.getString(field), field + " value is not as required\n");
             } catch (AssertionFailedError e) {
