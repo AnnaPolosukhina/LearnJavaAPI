@@ -21,13 +21,6 @@ public class Lesson3_Ex13_Test {
     @ArgumentsSource(JsonArgumentsProvider.class)
     public void testLesson3_Ex13_Test(JSONObject requiredValues) {
 
-        JsonPath response = RestAssured
-                .given()
-                .header("User-Agent", requiredValues.get("user_agent"))
-                .get("https://playground.learnqa.ru/ajax/api/user_agent_check")
-                .jsonPath();
-
-
         List<String> fieldsForCheck = new ArrayList<>();
         fieldsForCheck.add("platform");
         fieldsForCheck.add("browser");
@@ -35,21 +28,23 @@ public class Lesson3_Ex13_Test {
 
         List<String> allCaughtErrors = new ArrayList<>();
 
-        for(String field: fieldsForCheck){
+        JsonPath response = RestAssured
+                .given()
+                .header("User-Agent", requiredValues.get("user_agent"))
+                .get("https://playground.learnqa.ru/ajax/api/user_agent_check")
+                .jsonPath();
 
-            try {
-                assertNotNull(response.get(field), field+ " parameter is missing in the response\n");
-            } catch (AssertionFailedError e) {
-                allCaughtErrors.add(e.getMessage());
+        for (String field : fieldsForCheck) {
+
+            if (response.get(field) ==null) {
+                allCaughtErrors.add(field+ " parameter is missing in the response\n");
                 continue;
             }
 
-            if(response.get(field)!=null){
             try {
                 assertEquals(requiredValues.get(field), response.getString(field), field + " value is not as required\n");
             } catch (AssertionFailedError e) {
                 allCaughtErrors.add(e.getMessage());
-            }
             }
         }
 
