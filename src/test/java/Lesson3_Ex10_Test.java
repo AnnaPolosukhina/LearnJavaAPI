@@ -14,10 +14,10 @@ import java.util.Map;
 public class Lesson3_Ex10_Test {
 
     @ParameterizedTest
-    @ValueSource(strings = {"jkfjdi5646fdgfg645fjigjf", "str24324234234424ing3рр", "79837983"})
+    @ValueSource(strings = {"съешь ещё этих мягких французских булок, да выпей чаю", "съешь ещё этих мягких французских булок", "выпей чаю"})
     public void testLesson3_Ex10_Test(String stringForAssert){
-        int length = stringForAssert.length();
+        int lengthString = stringForAssert.length();
 
-        assertTrue(15 < length, "error, text "+ stringForAssert +" shorter than 15 characters");
+        assertTrue( lengthString>15, "error, text \""+ stringForAssert +"\" shorter than 15 characters");
     }
 }
