@@ -2,7 +2,6 @@ JsonArgumentsProvider.class
 lib\BaseTestCase.class
 tests\UserAuthTest.class
 Lesson3_Ex10_Test.class
-Lesson3_Ex14_Test.class
 lib\Assertions.class
 Lesson3_Ex12_Test.class
 Lesson2_Ex8_Test.class

@@ -13,8 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class Lesson3_Ex13_Test {
 
@@ -29,26 +28,36 @@ public class Lesson3_Ex13_Test {
                 .jsonPath();
 
 
-        List<String> allCaughtErrors = new ArrayList<>();
+        List<String> allCaughtErrors = new ArrayList<>();{
+            try {
+                assertNotNull(response.get("platform"), "Platform parameter is missing in the response\n");
+            } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
 
-        try {          assertTrue(response.get("platform")!=null && response.get("browser")!=null && response.get("device")!=null, "One of the checking parameters is missing in the response:" +
-                "\n platform = " + response.get("platform") +
-                "\n browser = " + response.get("browser") +
-                "\n device = " + response.get("device") +"\n"
-        );
-        } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
+            try {
+                assertNotNull(response.get("browser"), "Browser parameter is missing in the response\n");
+            } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
 
-        try {  assertEquals(requiredValues.get("platform"),  response.getString("platform"), "platform not as required\n");
-        } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
+            try {
+                assertNotNull(response.get("device"), "Device parameter is missing in the response\n");
+            } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
 
-        try {  assertEquals(requiredValues.get("browser"),  response.getString("browser"), "browser not as required\n");
-        } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
+            try {
+                assertEquals(requiredValues.get("platform"),  response.getString("platform"), "Platform value is not as required\n");
+            } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
 
-        try { assertEquals(requiredValues.get("device"),  response.getString("device"), "device not as required\n");
-        } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
+            try {
+                assertEquals(requiredValues.get("browser"),  response.getString("browser"), "Browser value is not as required\n");
+            } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
 
-        //кидаем ошибку, если были несоответствия и печатаем все найденные несоответствия из листа allCaughtErrors
-        if (allCaughtErrors.size()>=1){
+            try {
+                assertEquals(requiredValues.get("device"),  response.getString("device"), "Device value is not as required\n");
+            } catch (AssertionFailedError e) { allCaughtErrors.add( e.getMessage());}
+        }
+
+
+
+        //========================== кидаем ошибку, если были несоответствия и печатаем все найденные несоответствия из листа allCaughtErrors ==========================
+        if (allCaughtErrors.size()>0){
             throw new AssertionFailedError("For User Agent: \"" + requiredValues.get("user_agent") +"\" the following errors occurred: \n" +
                     allCaughtErrors.toString() );
         }
