@@ -112,7 +112,7 @@ public class UserRegisterTest extends BaseTestCase {
     public void testCreateUserWithVeryShortStrings (String key) {
 
         Map<String, String> userData = new HashMap<>();
-        userData.put(key, "a");
+        userData.put(key, DataGenerator.getRandomString(1));
         userData = DataGenerator.getRegistrationData(userData);
 
         Response responseCreateAuth = apiCoreRequests
