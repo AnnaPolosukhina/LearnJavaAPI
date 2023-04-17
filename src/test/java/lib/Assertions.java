@@ -28,6 +28,14 @@ public class Assertions {
         );
     }
 
+    public static void assertResponseTextEqualsByKey(Response Response,String key, String expectedAnswer){
+        assertEquals(
+                expectedAnswer,
+                Response.jsonPath().getString(key),
+                "Response text is not as expected"
+        );
+    }
+
     public static void assertResponseTextContains(Response response, String expectedAnswer){
         assertTrue(
                 response.asString().contains(expectedAnswer),
