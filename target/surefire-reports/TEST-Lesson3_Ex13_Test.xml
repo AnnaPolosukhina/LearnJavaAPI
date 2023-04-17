@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Lesson3_Ex13_Test" time="1.217" tests="5" errors="0" skipped="0" failures="3">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="Lesson3_Ex13_Test" time="1.145" tests="5" errors="0" skipped="0" failures="3">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\annas\AppData\Local\Temp\surefire10930016978501158363\surefirebooter12372036239308902938.jar C:\Users\annas\AppData\Local\Temp\surefire10930016978501158363 2023-04-17T18-00-04_416-jvmRun1 surefire14228234006634062851tmp surefire_05021706686242200274tmp"/>
+    <property name="sun.java.command" value="C:\Users\annas\AppData\Local\Temp\surefire5961814731501323808\surefirebooter11779187166271409042.jar C:\Users\annas\AppData\Local\Temp\surefire5961814731501323808 2023-04-17T19-31-20_658-jvmRun1 surefire3209829487050560482tmp surefire_015729083712735626679tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="D:\Git\LearnJavaAPI\target\test-classes;D:\Git\LearnJavaAPI\target\classes;C:\Users\annas\.m2\repository\org\junit\jupiter\junit-jupiter\5.8.1\junit-jupiter-5.8.1.jar;C:\Users\annas\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.8.1\junit-jupiter-api-5.8.1.jar;C:\Users\annas\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\annas\.m2\repository\org\junit\platform\junit-platform-commons\1.8.1\junit-platform-commons-1.8.1.jar;C:\Users\annas\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\annas\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.8.1\junit-jupiter-params-5.8.1.jar;C:\Users\annas\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.8.1\junit-jupiter-engine-5.8.1.jar;C:\Users\annas\.m2\repository\org\junit\platform\junit-platform-engine\1.8.1\junit-platform-engine-1.8.1.jar;C:\Users\annas\.m2\repository\com\googlecode\json-simple\json-simple\1.1\json-simple-1.1.jar;C:\Users\annas\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.5\jackson-databind-2.12.5.jar;C:\Users\annas\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.5\jackson-annotations-2.12.5.jar;C:\Users\annas\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.5\jackson-core-2.12.5.jar;C:\Users\annas\.m2\repository\io\rest-assured\rest-assured\5.1.1\rest-assured-5.1.1.jar;C:\Users\annas\.m2\repository\org\apache\groovy\groovy\4.0.1\groovy-4.0.1.jar;C:\Users\annas\.m2\repository\org\apache\groovy\groovy-xml\4.0.1\groovy-xml-4.0.1.jar;C:\Users\annas\.m2\repository\org\apache\httpcomponents\httpclient\4.5.13\httpclient-4.5.13.jar;C:\Users\annas\.m2\repository\org\apache\httpcomponents\httpcore\4.4.13\httpcore-4.4.13.jar;C:\Users\annas\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\annas\.m2\repository\commons-codec\commons-codec\1.11\commons-codec-1.11.jar;C:\Users\annas\.m2\repository\org\apache\httpcomponents\httpmime\4.5.13\httpmime-4.5.13.jar;C:\Users\annas\.m2\repository\org\hamcrest\hamcrest\2.1\hamcrest-2.1.jar;C:\Users\annas\.m2\repository\org\ccil\cowan\tagsoup\tagsoup\1.2.1\tagsoup-1.2.1.jar;C:\Users\annas\.m2\repository\io\rest-assured\json-path\5.1.1\json-path-5.1.1.jar;C:\Users\annas\.m2\repository\org\apache\groovy\groovy-json\4.0.1\groovy-json-4.0.1.jar;C:\Users\annas\.m2\repository\io\rest-assured\rest-assured-common\5.1.1\rest-assured-common-5.1.1.jar;C:\Users\annas\.m2\repository\io\rest-assured\xml-path\5.1.1\xml-path-5.1.1.jar;C:\Users\annas\.m2\repository\org\apache\commons\commons-lang3\3.11\commons-lang3-3.11.jar;C:\Users\annas\.m2\repository\io\qameta\allure\allure-junit5\2.13.0\allure-junit5-2.13.0.jar;C:\Users\annas\.m2\repository\io\qameta\allure\allure-junit-platform\2.13.0\allure-junit-platform-2.13.0.jar;C:\Users\annas\.m2\repository\io\qameta\allure\allure-java-commons\2.13.0\allure-java-commons-2.13.0.jar;C:\Users\annas\.m2\repository\io\qameta\allure\allure-model\2.13.0\allure-model-2.13.0.jar;C:\Users\annas\.m2\repository\org\slf4j\slf4j-api\1.7.25\slf4j-api-1.7.25.jar;C:\Users\annas\.m2\repository\org\apache\tika\tika-core\1.20\tika-core-1.20.jar;C:\Users\annas\.m2\repository\org\jooq\joor-java-8\0.9.10\joor-java-8-0.9.10.jar;C:\Users\annas\.m2\repository\org\junit\platform\junit-platform-launcher\1.4.0\junit-platform-launcher-1.4.0.jar;C:\Users\annas\.m2\repository\io\qameta\allure\allure-rest-assured\2.19.0\allure-rest-assured-2.19.0.jar;C:\Users\annas\.m2\repository\io\qameta\allure\allure-attachments\2.19.0\allure-attachments-2.19.0.jar;C:\Users\annas\.m2\repository\org\freemarker\freemarker\2.3.31\freemarker-2.3.31.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\annas\AppData\Local\Temp\surefire10930016978501158363\surefirebooter12372036239308902938.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\annas\AppData\Local\Temp\surefire5961814731501323808\surefirebooter11779187166271409042.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -57,8 +57,8 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="testLesson3_Ex13_Test{JSONObject}[1]" classname="Lesson3_Ex13_Test" time="0.229"/>
-  <testcase name="testLesson3_Ex13_Test{JSONObject}[2]" classname="Lesson3_Ex13_Test" time="0.275">
+  <testcase name="testLesson3_Ex13_Test{JSONObject}[1]" classname="Lesson3_Ex13_Test" time="0.22"/>
+  <testcase name="testLesson3_Ex13_Test{JSONObject}[2]" classname="Lesson3_Ex13_Test" time="0.232">
     <failure message="For User Agent: &quot;Mozilla/5.0 (iPad; CPU OS 13_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/91.0.4472.77 Mobile/15E148 Safari/604.1&quot; the following errors occurred: &#10;[browser value is not as required&#10; ==&gt; expected: &lt;Chrome&gt; but was: &lt;No&gt;]" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
 For User Agent: "Mozilla/5.0 (iPad; CPU OS 13_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) CriOS/91.0.4472.77 Mobile/15E148 Safari/604.1" the following errors occurred: 
 [browser value is not as required
@@ -66,7 +66,7 @@ For User Agent: "Mozilla/5.0 (iPad; CPU OS 13_2 like Mac OS X) AppleWebKit/605.1
 	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:47)
 ]]></failure>
   </testcase>
-  <testcase name="testLesson3_Ex13_Test{JSONObject}[3]" classname="Lesson3_Ex13_Test" time="0.207">
+  <testcase name="testLesson3_Ex13_Test{JSONObject}[3]" classname="Lesson3_Ex13_Test" time="0.211">
     <failure message="For User Agent: &quot;Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)&quot; the following errors occurred: &#10;[platform value is not as required&#10; ==&gt; expected: &lt;Googlebot&gt; but was: &lt;Unknown&gt;]" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
 For User Agent: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" the following errors occurred: 
 [platform value is not as required
@@ -74,8 +74,8 @@ For User Agent: "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/
 	at Lesson3_Ex13_Test.testLesson3_Ex13_Test(Lesson3_Ex13_Test.java:47)
 ]]></failure>
   </testcase>
-  <testcase name="testLesson3_Ex13_Test{JSONObject}[4]" classname="Lesson3_Ex13_Test" time="0.232"/>
-  <testcase name="testLesson3_Ex13_Test{JSONObject}[5]" classname="Lesson3_Ex13_Test" time="0.262">
+  <testcase name="testLesson3_Ex13_Test{JSONObject}[4]" classname="Lesson3_Ex13_Test" time="0.245"/>
+  <testcase name="testLesson3_Ex13_Test{JSONObject}[5]" classname="Lesson3_Ex13_Test" time="0.224">
     <failure message="For User Agent: &quot;Mozilla/5.0 (iPad; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1&quot; the following errors occurred: &#10;[device value is not as required&#10; ==&gt; expected: &lt;iPhone&gt; but was: &lt;Unknown&gt;]" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: 
 For User Agent: "Mozilla/5.0 (iPad; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1" the following errors occurred: 
 [device value is not as required

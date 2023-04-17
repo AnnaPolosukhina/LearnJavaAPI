@@ -12,14 +12,15 @@ import static io.restassured.RestAssured.given;
 public class ApiCoreRequests {
 
     @Step("Make a get-request with token and auth cookie")
-    public Response makeGetRequest(String url, String token, String cookie){
+    public Response makeGetRequest(String url, String header, String cookie){
         return given()
                 .filter(new AllureRestAssured())
-                .header(new Header("x-csrf-token", token))
+                .header(new Header("x-csrf-token", header))
                 .cookie("auth_sid", cookie)
                 .get(url)
                 .andReturn();
     }
+
 
     @Step("Make a get-request with cookie only")
     public Response makeGetRequestWithCookie(String url, String cookie){
@@ -35,6 +36,14 @@ public class ApiCoreRequests {
         return given()
                 .filter(new AllureRestAssured())
                 .header(new Header("x-csrf-token", token))
+                .get(url)
+                .andReturn();
+    }
+
+    @Step("Make a get-request with url only")
+    public Response makeGetRequest(String url){
+        return given()
+                .filter(new AllureRestAssured())
                 .get(url)
                 .andReturn();
     }
