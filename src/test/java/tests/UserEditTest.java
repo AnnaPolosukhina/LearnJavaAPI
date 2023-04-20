@@ -126,7 +126,6 @@ public class UserEditTest extends BaseTestCase {
 
         //============GENERATE USER & REGISTRATION (FIRST USER)============
         Map<String, String> firstUserData = new HashMap<>();
-        //   firstUserData.put("firstName", currentName);
         firstUserData = DataGenerator.getRegistrationData(firstUserData);
 
         Response responseCreateAuth = apiCoreRequests

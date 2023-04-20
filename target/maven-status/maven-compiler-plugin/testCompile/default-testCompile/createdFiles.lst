@@ -10,6 +10,7 @@ tests\UserGetTest.class
 Lesson2_Ex8_Test.class
 tests\UserEditTest.class
 Lesson2_Ex6_Test.class
+tests\UserDeleteTest.class
 yandex.class
 Lesson3_Ex11_Test.class
 Lesson3_Ex13_Test.class
