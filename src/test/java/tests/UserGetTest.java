@@ -1,6 +1,8 @@
 package tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import lib.ApiCoreRequests;
@@ -12,12 +14,14 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+@Epic("Getting cases")
 public class UserGetTest extends BaseTestCase {
 
     private final ApiCoreRequests apiCoreRequests = new ApiCoreRequests();
 
     @Description("This test trying to get user data without authorization")
     @DisplayName("Request user data without authorization")
+    @Feature("Getting negative")
     @Test
     public void testGetUserDataNotAuth() {
         Response responseUserData = apiCoreRequests
@@ -32,6 +36,7 @@ public class UserGetTest extends BaseTestCase {
 
     @Description("This test logs in as one user and requests his data")
     @DisplayName("Request your own user data")
+    @Feature("Getting positive")
     @Test
     public void testGetUserDetailsForSameUser() {
 
@@ -55,6 +60,7 @@ public class UserGetTest extends BaseTestCase {
 
     @Description("This test logs in as one user and requests the data of another")
     @DisplayName("Requesting another user's data")
+    @Feature("Getting negative")
     @Test
     public void testGetUserDetailsForOtherUser() {
 

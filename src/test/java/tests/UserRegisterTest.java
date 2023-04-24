@@ -21,13 +21,13 @@ import java.util.Random;
 import java.util.stream.Collectors;
 
 @Epic("Registration cases")
-@Feature("Registration ")
 public class UserRegisterTest extends BaseTestCase {
 
     private final ApiCoreRequests apiCoreRequests = new ApiCoreRequests();
 
     @Description("This test tries to create a registration with an already taken email")
     @DisplayName("Test negative registration by existing email")
+    @Feature("Registration negative")
     @Test
     public void testCreateUserWithExistingEmail() {
         String email = "vinkotov@example.com";
@@ -48,6 +48,7 @@ public class UserRegisterTest extends BaseTestCase {
 
     @Description("This test creates a registration from uniquely generated data")
     @DisplayName("Test positive registration")
+    @Feature("Registration positive")
     @Test
     public void testCreateUserSuccessfully() {
         Map<String, String> userData = DataGenerator.getRegistrationData();
@@ -65,6 +66,7 @@ public class UserRegisterTest extends BaseTestCase {
 
     @Description("This test creates a registration with invalid email - No '@' symbol")
     @DisplayName("Test negative registration - No @ in Email")
+    @Feature("Registration negative")
     @Test
     public void testCreateUserWithInvalidEmailWithoutAtSign () {
         String email = DataGenerator.getRandomEmailWithoutAtSign();
@@ -86,6 +88,7 @@ public class UserRegisterTest extends BaseTestCase {
 
     @Description("This test creates a registration with missing fields")
     @DisplayName("Test negative registration - with missing fields")
+    @Feature("Registration negative")
     @ParameterizedTest
     @ValueSource(strings = { "username", "password", "firstName", "lastName", "email" })
     public void testCreateUserWithMissingFields (String key) {
@@ -107,6 +110,7 @@ public class UserRegisterTest extends BaseTestCase {
 
     @Description("This test creates a registration with a very short name in fields")
     @DisplayName("Test negative registration - Very Short Strings")
+    @Feature("Registration negative")
     @ParameterizedTest
     @ValueSource(strings = { "username", "password", "firstName", "lastName", "email" })
     public void testCreateUserWithVeryShortStrings (String key) {
@@ -127,6 +131,7 @@ public class UserRegisterTest extends BaseTestCase {
 
     @Description("This test creates a registration with a very long name in field firstName")
     @DisplayName("Test negative registration - Very long String in firstName")
+    @Feature("Registration negative")
     @Test
     public void testCreateUserWithVeryLongNameInFirstName () {
 

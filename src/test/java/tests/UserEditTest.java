@@ -1,6 +1,8 @@
 package tests;
 
 import io.qameta.allure.Description;
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
 import io.restassured.response.Response;
 import lib.ApiCoreRequests;
 import lib.Assertions;
@@ -12,12 +14,14 @@ import org.junit.jupiter.api.Test;
 import java.util.HashMap;
 import java.util.Map;
 
+@Epic("Editing cases")
 public class UserEditTest extends BaseTestCase {
 
     private final ApiCoreRequests apiCoreRequests = new ApiCoreRequests();
 
     @Description("This test edit field firstName in just created user")
     @DisplayName("Edit Just Created User")
+    @Feature("Editing positive")
     @Test
     public void testEditJustCreatedTest() {
 
@@ -64,6 +68,7 @@ public class UserEditTest extends BaseTestCase {
 
     @Description("We will try to change the user data, being unauthorized")
     @DisplayName("Edit Just Created User Being Unauthorized")
+    @Feature("Editing negative")
     @Test
     public void testEditUserByUnauthorized() {
 
@@ -118,6 +123,7 @@ public class UserEditTest extends BaseTestCase {
 
     @Description("We will try to change the data of the user, being authorized by another user")
     @DisplayName("Edit User by another user")
+    @Feature("Editing negative")
     @Test
     public void testEditUserByAnotherUser() {
 
@@ -180,6 +186,7 @@ public class UserEditTest extends BaseTestCase {
 
     @Description("This test try to change the user's email, being authorized by the same user, to a new email without the @ symbol")
     @DisplayName("Edit new email without the @ symbol")
+    @Feature("Editing negative")
     @Test
     public void testEditNewEmailWithoutAtSymbol() {
 
@@ -228,6 +235,7 @@ public class UserEditTest extends BaseTestCase {
 
     @Description("This test try to change the firstName of the user, being authorized by the same user, to a very short value of one character")
     @DisplayName("Edit firstName of one character")
+    @Feature("Editing negative")
     @Test
     public void testEditFirstNameByShort() {
 

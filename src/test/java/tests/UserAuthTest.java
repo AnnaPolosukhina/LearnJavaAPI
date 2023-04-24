@@ -24,7 +24,6 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 @Epic("Authorisation cases")
-@Feature("Authorisation")
 public class UserAuthTest extends BaseTestCase {
 
     String cookie;
@@ -47,6 +46,7 @@ public class UserAuthTest extends BaseTestCase {
     }
 
         @Test
+        @Feature("Authorisation positive")
         @Description("This test successfully authorise user by email and password")
         @DisplayName("Test positive auth user")
         public void testAuthUser(){
@@ -61,6 +61,7 @@ public class UserAuthTest extends BaseTestCase {
         }
         @Description("This test check authorisation status without sending cookie or token")
         @DisplayName("Test negative auth user")
+        @Feature("Authorisation negative")
         @ParameterizedTest
         @ValueSource(strings = {"cookie", "headers"})
         public void testNegativeAuth(String condition) throws IllegalAccessException {
